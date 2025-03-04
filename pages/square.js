@@ -30,9 +30,7 @@ export default function Canvas() {
     canvas.height = 600;
 
     const roughCanvas = rough.canvas(canvas);
-    const ctx = canvas.getContext("2d");
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+    
     elements.forEach((element) => {
       roughCanvas.draw(element.roughElement);
     });

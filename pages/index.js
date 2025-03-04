@@ -8,11 +8,17 @@ export default function Index() {
         <Link href="/sketch-canvas">
           <button>Sketch Canvas</button>
         </Link>
-        <Link href="/canvas">
-          <button>Canvas</button>
+        <Link href="/square">
+          <button>Square</button>
         </Link>
         <Link href="/freehand">
           <button>Freehand</button>
+        </Link>
+        <Link href="/combined">
+          <button>Combined</button>
+        </Link>
+        <Link href="/combined">
+          <button>Text</button>
         </Link>
       </div>
     </div>

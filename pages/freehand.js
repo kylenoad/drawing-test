@@ -11,11 +11,12 @@ function createFreehandPath(points) {
   });
 }
 
-export default function freehand() {
+export default function draw() {
   const [drawing, setDrawing] = useState(false);
   const [elements, setElements] = useState([]);
+  console.log(elements, "ELEMENTS");
   const [path, setPath] = useState([]);
-  console.log(path);
+  console.log(path, "PATH");
 
   useEffect(() => {
     const canvas = document.getElementById("canvas");
@@ -23,8 +24,6 @@ export default function freehand() {
     canvas.height = 600;
 
     const roughCanvas = rough.canvas(canvas);
-    const ctx = canvas.getContext("2d");
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     elements.forEach((element) => {
       roughCanvas.draw(element);

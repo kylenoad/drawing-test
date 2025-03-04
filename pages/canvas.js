@@ -3,7 +3,7 @@ import rough from "roughjs/bundled/rough.esm";
 
 const generator = rough.generator();
 
-function createElement(x1, y1, x2, y2) {
+function createSquare(x1, y1, x2, y2) {
   const width = x2 - x1;
   const height = y2 - y1;
 
@@ -45,7 +45,7 @@ export default function Canvas() {
     const x = event.clientX;
     const y = event.clientY;
 
-    const element = createElement(x, y, x, y);
+    const element = createSquare(x, y, x, y);
     setElements((prevArray) => [...prevArray, element]);
   };
 
@@ -58,7 +58,7 @@ export default function Canvas() {
 
     const index = elements.length - 1;
     const { x1, y1 } = elements[index];
-    const updatedElement = createElement(x1, y1, x, y);
+    const updatedElement = createSquare(x1, y1, x, y);
 
     const elementsCopy = [...elements];
     elementsCopy[index] = updatedElement;
